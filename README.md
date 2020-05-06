@@ -15,8 +15,7 @@ Sprint Backlog contains a list of tasks that a team targets to deliver during a 
     - Link GitHub to project in Visual Studio Code: enable git flow process.
     - **Story Point =** 1
 
-2. **Create Survey Model**
-    ##### Definition of Done: 
+2. **Create Survey Model** 
     - Survey model contains an id, name and a list of Survey Responses.
     - Each variable has a corresponding getter method.
     - **Story Point =** 1
