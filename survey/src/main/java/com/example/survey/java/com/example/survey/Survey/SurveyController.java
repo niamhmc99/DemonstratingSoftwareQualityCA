@@ -1,5 +1,7 @@
 package com.example.survey.java.com.example.survey.Survey;
 
+import java.util.List;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -23,6 +25,10 @@ public class SurveyController {
     @RequestMapping("/surveys/{surveyName}")
 	public Survey getSurvey(@PathVariable("surveyName") String surveyName) {
         return surveyService.getSurvey(surveyName);
+	}
+
+	public List<Survey> findAllSurveys() {
+        return surveyService.findAllSurveys();
 	}
     
 

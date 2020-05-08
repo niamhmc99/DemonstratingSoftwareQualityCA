@@ -1,6 +1,8 @@
 package com.example.survey.java.com.example.survey.Survey;
 
 import java.util.ArrayList;
+import java.util.List;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
@@ -22,7 +24,6 @@ public class SurveyService {
         surveyList.add(survey);
     }
 
-
 	public Survey getSurvey(String surveyName) {
         try{
             return surveyList.stream().filter(survey -> survey.getSurveyName().equals(surveyName)).findFirst().get();
@@ -30,5 +31,9 @@ public class SurveyService {
             logger.error("[ERROR] Survey not found in the list");
             throw new IllegalArgumentException("Survey not found");
         }
+	}
+
+	public List<Survey> findAllSurveys() {
+		return surveyList;
 	}
 }
