@@ -11,64 +11,64 @@ Sprint Backlog contains a list of tasks that a team targets to deliver during a 
 ### Sprint Backlog
 
 1. **Set up the Development Environment**
-    - Create Workspace in Visual Studio Code.
-    - Link GitHub to project in Visual Studio Code: enable git flow process.
-    - **Story Point =** 1
+- Create Workspace in Visual Studio Code.
+- Link GitHub to project in Visual Studio Code: enable git flow process.
+- **Story Point =** 1
 
 2. **Create a Project Plan**
-    - Develop a plan in order to identify the tasks involved to successfully complete this project.
-    - Prioritise Sprint Backlog. 
-    - Estimate the time for each task using Story Points. 
-    - **Story Point =** 2
+- Develop a plan in order to identify the tasks involved to successfully complete this project.
+- Prioritise Sprint Backlog. 
+- Estimate the time for each task using Story Points. 
+- **Story Point =** 2
 
 3. **Create Survey Model** 
-    - Survey model contains an id, name and a list of Survey Responses.
-    - Each variable has a corresponding getter method.
-    - **Story Point =** 1
+- Survey model contains an id, name and a list of Survey Responses.
+- Each variable has a corresponding getter method.
+- **Story Point =** 1
 
 4. **Create Survey Response Model**
-    - Survey Response model contains an id, response and a list of Survey Responses.
-    - Each variable has a corresponding getter method.
-    - Method to add a response
-    - **Story Point =** 1    
+- Survey Response model contains an id, response and a list of Survey Responses.
+- Each variable has a corresponding getter method.
+- Method to add a response
+- **Story Point =** 1    
 
 5. **Create Survey Service Class**
-    - Use @Service annotation.
-    - Includes: 
-        - getAllSurveys() -> retruns Survey list.
-        - getSurveyByName() -> returns specific Survey.
-        - addSurvey() -> add a new Survey to the list of Surveys. 
-        - deleteSurvey() -> deletes and removes a Survey from the list of Surveys.
-        - addSurveyResponse() -> add a Survey Response to the list. 
-    - **Story Point =** 5
+- Use @Service annotation.
+- Includes: 
+    - getAllSurveys() -> retruns Survey list.
+    - getSurveyByName() -> returns specific Survey.
+    - addSurvey() -> add a new Survey to the list of Surveys. 
+    - deleteSurvey() -> deletes and removes a Survey from the list of Surveys.
+    - addSurveyResponse() -> add a Survey Response to the list. 
+- **Story Point =** 5
 
 6. **Create Survey Controller Class**
-    - Use @Controller annotation.
-    - Includes: 
-        - getAllSurveys() -> get all Surveys.
-        - getSurveyByName() -> get Survey with specific name. 
-        - addSurvey() -> creates new Survey.
-        - deleteSurvey() -> delete a Survey.
-        - addSurveyResponse() -> add Survey Response to the list. 
-     - **Story Point =** 5
+- Use @Controller annotation.
+- Includes: 
+    - getAllSurveys() -> get all Surveys.
+    - getSurveyByName() -> get Survey with specific name. 
+    - addSurvey() -> creates new Survey.
+    - deleteSurvey() -> delete a Survey.
+    - addSurveyResponse() -> add Survey Response to the list. 
+- **Story Point =** 5
 
 7. **Create Survey Response Service Class**
-    - Use @Service annotation.
-    - Includes: 
-        - setResponse() -> submits response for a Survey Response.
-        - getSurveyResponses() -> returns all responses of a Survey Response.
-        - addSurveyResponse() -> submits new response to a Survey Response. 
-    - **Story Point =** 3
+- Use @Service annotation.
+- Includes: 
+    - setResponse() -> submits response for a Survey Response.
+    - getSurveyResponses() -> returns all responses of a Survey Response.
+    - addSurveyResponse() -> submits new response to a Survey Response. 
+ - **Story Point =** 3
 
 8. **Create Survey Response Controller Class**
-    - Use @Controller annotation.
-    - Includes: 
-        - getAllSurveys() -> get all Surveys.
-        - getSurveyByName() -> get Survey with specific name. 
-        - addSurvey() -> creates new Survey.
-        - deleteSurvey() -> delete a Survey.
-        - addSurveyResponse() -> add Survey Response to the list. 
-     - **Story Point =** 3
+- Use @Controller annotation.
+- Includes: 
+    - getAllSurveys() -> get all Surveys.
+    - getSurveyByName() -> get Survey with specific name. 
+    - addSurvey() -> creates new Survey.
+    - deleteSurvey() -> delete a Survey.
+    - addSurveyResponse() -> add Survey Response to the list. 
+- **Story Point =** 3
 
 9. **Add Summary Calculation to Survey**
 - Survey Service and Survey Controller contains the following:
@@ -109,11 +109,12 @@ Sprint Backlog contains a list of tasks that a team targets to deliver during a 
 13 | Long Time to Deliver - High Complexity, Contains many critical Unknowns. Like an 8; discuss ways to break it down into smaller tasks.  
 21 | Danger Zone - Find a way to break down the complexity into smaller tasks.
 
-For example: 
-The 3rd story task: Create Survey Model has an estimated number of story points = 1. This task is straight forward and requires minimal amount of time. However, the 6th story task: Create Survey Controller Class has an estimated number of story points = 5. This story task in comparison to the 3rd story, involves a larger amount of work due higher complexity and the unknowns that may be discovered throughout the development. 
+**For example:** 
+
+The 3rd story task: Create Survey Model has an estimated number of story points = 1. This task is straight forward and requires minimal amount of time. However, the 6th story task: Create Survey Controller Class has an estimated number of story points = 5. This story task in comparison to the 3rd story, involves a larger amount of work due to higher complexity and the unknowns that may be discovered throughout the development. 
 
 ### Velocity Metircs:
-Velocity is a measure of the amount of work a team can accomplish during a sprint. It is calculated at the end of a sprint by adding up the features, user stories or backlog items estimates successfully delivered within a sprint. This allows the team to accurately perdict the amount of stories they will realistically get to complete in the next sprint. 
+Velocity is a measure of the amount of work a team can accomplish during a sprint. It is calculated at the end of a sprint by adding up all the story points given to each feature, user story or backlog item that is successfully delivered within a sprint. This allows the team to accurately perdict the amount of stories they will realistically get to complete in the next sprint. 
 
 ## Unit Testing and Test-Driven Development
 Test Driven Development is the process of software development where you first write a test thats fails before writing the implementation code.
@@ -125,3 +126,4 @@ Test Driven Development is the process of software development where you first w
 ## Team Version-Control 
 
 ## Code-Review Checklist
+
