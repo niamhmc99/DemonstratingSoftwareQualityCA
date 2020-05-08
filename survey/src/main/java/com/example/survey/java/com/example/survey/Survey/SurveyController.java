@@ -21,7 +21,7 @@ public class SurveyController {
         }
 
     @RequestMapping("/surveys/{surveyName}")
-	public Survey getSurvey(@PathVariable("name") String surveyName) {
+	public Survey getSurvey(@PathVariable("surveyName") String surveyName) {
         return surveyService.getSurvey(surveyName);
 	}
     
