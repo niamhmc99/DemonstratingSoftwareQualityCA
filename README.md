@@ -35,9 +35,9 @@ Sprint Backlog contains a list of tasks that a team targets to deliver during a 
 5. **Create Survey Service Class**
 - Use @Service annotation.
 - Includes: 
-    - getAllSurveys() -> retruns Survey list.
-    - getSurveyByName() -> returns specific Survey.
-    - addSurvey() -> add a new Survey to the list of Surveys. 
+    - findAllSurveys() -> retruns Survey list.
+    - findSurveyByName() -> returns specific Survey.
+    - createSurvey() -> create/ add a new Survey to the list of Surveys. 
     - deleteSurvey() -> deletes and removes a Survey from the list of Surveys.
     - addSurveyResponse() -> add a Survey Response to the list. 
 - **Story Point =** 5
