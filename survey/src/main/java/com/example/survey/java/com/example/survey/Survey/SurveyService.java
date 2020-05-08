@@ -36,4 +36,9 @@ public class SurveyService {
 	public List<Survey> findAllSurveys() {
 		return surveyList;
 	}
+
+	public void deleteSurvey(int id) {
+        surveyList.removeIf(survey -> survey.getId()==(id));
+
+        }   
 }

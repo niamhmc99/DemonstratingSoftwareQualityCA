@@ -27,9 +27,16 @@ public class SurveyController {
         return surveyService.getSurvey(surveyName);
 	}
 
+    @RequestMapping("/surveys")
 	public List<Survey> findAllSurveys() {
         return surveyService.findAllSurveys();
 	}
+
+    @RequestMapping( value = "/surveys/{id}", method = RequestMethod.DELETE)
+	public void deleteSurvey(int id) {
+        surveyService.deleteSurvey(id);
+    }
+    
     
 
 

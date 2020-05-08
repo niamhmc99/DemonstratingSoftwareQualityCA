@@ -43,13 +43,22 @@ public class SurveyTest {
         surveyController.createSurvey(new Survey(24, "Test 1"));
         surveyController.createSurvey(new Survey(25, "Test 2"));
         surveyController.createSurvey(new Survey(26, "Test 3"));
-
         //WHEN
         List<Survey> surveyList = surveyController.findAllSurveys();
-        
         //THEN
         assertEquals(surveyList.size(), 3, "All Surveys");
     }
 
+    @Test
+    public void deleteSurveyTest(){
+        //GIVEN
+        surveyController.createSurvey(new Survey(26, "Test 4"));
+        surveyController.createSurvey(new Survey(27, "Test 5"));
+         //WHEN
+        surveyController.deleteSurvey(27);
+        List<Survey> surveyList = surveyController.findAllSurveys();
+        //THEN
+        assertEquals(surveyList.size(), 1, "Survey is Deleted");
+    }
     
 }
