@@ -32,45 +32,47 @@ Sprint Backlog contains a list of tasks that a team targets to deliver during a 
 - Method to add a response
 - **Story Point =** 1    
 
+
 5. **Create Survey Service Class**
 - Use @Service annotation.
-- Includes: 
+- Includes Unit Tests for below methods following TDD: 
     - getAllSurveys() -> retruns Survey list.
     - getSurveyByName() -> returns specific Survey.
-    - addSurvey() -> add a new Survey to the list of Surveys. 
+    - createSurvey() -> create and adds a new Survey to the list of Surveys. 
     - deleteSurvey() -> deletes and removes a Survey from the list of Surveys.
     - addSurveyResponse() -> add a Survey Response to the list. 
 - **Story Point =** 5
 
 6. **Create Survey Controller Class**
 - Use @Controller annotation.
-- Includes: 
+- Methods contains request mappings. 
+- Includes Unit Tests for below methods following TDD: 
     - getAllSurveys() -> get all Surveys.
     - getSurveyByName() -> get Survey with specific name. 
-    - addSurvey() -> creates new Survey.
+    - createSurvey() -> creates new Survey.
     - deleteSurvey() -> delete a Survey.
     - addSurveyResponse() -> add Survey Response to the list. 
 - **Story Point =** 5
 
 7. **Create Survey Response Service Class**
 - Use @Service annotation.
-- Includes: 
+- Includes Unit Tests for below methods following TDD: 
     - setResponse() -> submits response for a Survey Response.
     - getSurveyResponses() -> returns all responses of a Survey Response.
     - addSurveyResponse() -> submits new response to a Survey Response. 
- - **Story Point =** 3
+ - **Story Point =** 5
 
 8. **Create Survey Response Controller Class**
 - Use @Controller annotation.
-- Includes: 
-    - getAllSurveys() -> get all Surveys.
-    - getSurveyByName() -> get Survey with specific name. 
-    - addSurvey() -> creates new Survey.
-    - deleteSurvey() -> delete a Survey.
-    - addSurveyResponse() -> add Survey Response to the list. 
-- **Story Point =** 3
+- Methods contains request mappings. 
+- Includes Unit Tests for below methods following TDD: 
+    - setResponse() -> submits response for a Survey Response.
+    - getSurveyResponses() -> returns all responses of a Survey Response.
+    - addSurveyResponse() -> submits new response to a Survey Response. 
+- **Story Point =** 5
 
 9. **Add Summary Calculation to Survey**
+- Include Unit Tests for below methods following TDD.
 - Survey Service and Survey Controller contains the following:
     - getSurveyAverage() -> returns average result of a Survey. 
     - getSurveyStandardDeviation() -> return the standard deviation result of a Survey. 
@@ -79,6 +81,7 @@ Sprint Backlog contains a list of tasks that a team targets to deliver during a 
 - **Story Point =** 5
 
 10. **Add Summary Calculation to Survey Response**
+- Include Unit Tests for below methods following TDD.
 - Survey Response Service and Survey Response Controller contains the following:
     - getSurveyResponseAverage() -> returns average result of a Survey Response. 
     - getSurveyStandardDeviation() -> return the standard deviation result of responses for a Survey Response. 
