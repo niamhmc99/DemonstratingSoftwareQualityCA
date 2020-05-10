@@ -63,14 +63,48 @@ public class SurveyTest {
 
     @Test
     public void addSurveyResponseTest() {
+        //GIVEN
         List<SurveyResponse> surveyResponses;
         SurveyResponse surveyResponseTest;
-        //GIVEN
         surveyController.createSurvey(new Survey(0, "Test 6"));
         surveyResponseTest = new SurveyResponse(28);
+        //WHEN
         surveyController.addSurveyResponse(0, surveyResponseTest);
-        
         surveyResponses = surveyController.getSurvey("Test 6").getResponses();
+        //THEN
         assertEquals(surveyResponses.get(0), surveyResponseTest, "SurveyResponse");
+    }
+
+    @Test
+    public void surveyResponseListTest(){
+        //GIVEN 
+        List<SurveyResponse> surveyResponses;
+        SurveyResponse surveyResponse0, surveyResponse1, surveyResponse2, surveyResponse3, surveyResponse4, surveyResponse5, surveyResponse6, surveyResponse7, surveyResponse8, surveyResponse9;
+        //WHEN
+        surveyController.createSurvey(new Survey(0, "Test Survey Response"));
+        surveyResponse0 = new SurveyResponse(0);
+        surveyResponse1 = new SurveyResponse(1);
+        surveyResponse2 = new SurveyResponse(2);
+        surveyResponse3 = new SurveyResponse(3);
+        surveyResponse4 = new SurveyResponse(4);
+        surveyResponse5 = new SurveyResponse(5);
+        surveyResponse6 = new SurveyResponse(6);
+        surveyResponse7 = new SurveyResponse(7);
+        surveyResponse8 = new SurveyResponse(8);
+        surveyResponse9 = new SurveyResponse(9);
+        surveyController.addSurveyResponse(0, surveyResponse0);
+        surveyController.addSurveyResponse(0, surveyResponse1);
+        surveyController.addSurveyResponse(0, surveyResponse2);
+        surveyController.addSurveyResponse(0, surveyResponse3);
+        surveyController.addSurveyResponse(0, surveyResponse4);
+        surveyController.addSurveyResponse(0, surveyResponse5);
+        surveyController.addSurveyResponse(0, surveyResponse6);
+        surveyController.addSurveyResponse(0, surveyResponse7);
+        surveyController.addSurveyResponse(0, surveyResponse8);
+        surveyController.addSurveyResponse(0, surveyResponse9);
+
+        surveyResponses = surveyController.getSurvey("Test Survey Response").getResponses();
+        //THEN
+        assertEquals(surveyResponses.size(), 10, "List should not contain more than 10 survey responses");
     }
 }
