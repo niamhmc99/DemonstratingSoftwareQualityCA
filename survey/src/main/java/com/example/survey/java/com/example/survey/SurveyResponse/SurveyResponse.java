@@ -15,7 +15,7 @@ public class SurveyResponse {
     private List<Integer> responses;
 
     public SurveyResponse(){
-
+        
     }
 
     public SurveyResponse(int surveyResponseId){
