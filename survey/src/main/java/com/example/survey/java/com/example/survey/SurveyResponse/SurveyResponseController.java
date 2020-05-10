@@ -32,4 +32,8 @@ public class SurveyResponseController {
 		return surveyResponseService.getResponses();
 	}
 
+	public Integer getResponse() {
+		return surveyResponseService.getResponse();
+	}
+
 }

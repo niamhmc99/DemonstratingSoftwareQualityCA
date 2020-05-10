@@ -41,4 +41,14 @@ public class SurveyResponseTest {
         //THEN
         assertTrue(responses.contains(2));
     }
+
+    @Test 
+    public void getSurveyResponse(){
+        //GIVEN
+        surveyResponseController.addResponse(3);
+        //WHEN
+        surveyResponseController.setResponse(3);
+        //THEN
+        assertEquals(3, surveyResponseController.getResponse(), "Survey Response");
+    }
 }
