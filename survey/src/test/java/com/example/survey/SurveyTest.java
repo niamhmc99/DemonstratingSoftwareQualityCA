@@ -3,6 +3,7 @@ package com.example.survey;
 import com.example.survey.java.com.example.survey.Survey.Survey;
 import com.example.survey.java.com.example.survey.Survey.SurveyController;
 import com.example.survey.java.com.example.survey.Survey.SurveyService;
+import com.example.survey.java.com.example.survey.SurveyResponse.SurveyResponse;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
@@ -12,7 +13,6 @@ import java.util.List;
 import org.junit.jupiter.api.Test;
 
 public class SurveyTest {
-
     SurveyController surveyController = new SurveyController(new SurveyService());
 
     @Test
@@ -60,5 +60,17 @@ public class SurveyTest {
         //THEN
         assertEquals(surveyList.size(), 1, "Survey is Deleted");
     }
-    
+
+    @Test
+    public void addSurveyResponseTest() {
+        List<SurveyResponse> surveyResponses;
+        SurveyResponse surveyResponseTest;
+        //GIVEN
+        surveyController.createSurvey(new Survey(0, "Test 6"));
+        surveyResponseTest = new SurveyResponse(28);
+        surveyController.addSurveyResponse(0, surveyResponseTest);
+        
+        surveyResponses = surveyController.getSurvey("Test 6").getResponses();
+        assertEquals(surveyResponses.get(0), surveyResponseTest, "SurveyResponse");
+    }
 }
