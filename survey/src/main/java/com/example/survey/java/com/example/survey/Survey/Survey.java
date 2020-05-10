@@ -46,4 +46,7 @@ public class Survey {
     public void setResponses(List<SurveyResponse> responses) {
         this.responses = responses;
     }
+
+	public void addSurveyResponse(String string) {
+	}
 }

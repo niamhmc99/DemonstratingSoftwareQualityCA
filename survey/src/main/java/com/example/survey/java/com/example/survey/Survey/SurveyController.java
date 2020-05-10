@@ -2,8 +2,11 @@ package com.example.survey.java.com.example.survey.Survey;
 
 import java.util.List;
 
+import com.example.survey.java.com.example.survey.SurveyResponse.SurveyResponse;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -36,8 +39,10 @@ public class SurveyController {
 	public void deleteSurvey(int id) {
         surveyService.deleteSurvey(id);
     }
-    
-    
 
-
+    @RequestMapping( value = "/survey/answer", method = RequestMethod.POST)
+	public void addSurveyResponse(@RequestParam("surveyId") int surveyId, @RequestBody SurveyResponse surveyResponse) {
+        surveyService.addSurveyResponse(surveyId, surveyResponse);
+	}    
+    
 }
