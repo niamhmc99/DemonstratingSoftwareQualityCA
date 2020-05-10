@@ -59,7 +59,7 @@ Sprint Backlog contains a list of tasks that a team targets to deliver during a 
 - Includes Unit Tests for below methods following TDD: 
     - setResponse() -> submits response for a Survey Response.
     - getSurveyResponses() -> returns all responses of a Survey Response.
-    - addSurveyResponse() -> submits new response to a Survey Response. 
+    - createSurveyResponse() -> submits new response to a Survey Response. 
  - **Story Point =** 5
 
 8. **Create Survey Response Controller Class**
@@ -68,7 +68,7 @@ Sprint Backlog contains a list of tasks that a team targets to deliver during a 
 - Includes Unit Tests for below methods following TDD: 
     - setResponse() -> submits response for a Survey Response.
     - getSurveyResponses() -> returns all responses of a Survey Response.
-    - addSurveyResponse() -> submits new response to a Survey Response. 
+    - createSurveyResponse() -> submits new response to a Survey Response. 
 - **Story Point =** 5
 
 9. **Add Summary Calculation to Survey**
