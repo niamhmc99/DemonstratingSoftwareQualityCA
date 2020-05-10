@@ -20,4 +20,18 @@ public class SurveyResponseService {
 	public List<Integer> getResponses() {
 		return surveyResponse.getResponses();
 	}
+
+	public void setResponse(int responseAnswer) {
+        if(surveyResponse.getResponses().contains(responseAnswer)){
+            surveyResponse.setResponseAnswer(responseAnswer);
+        }else{
+            System.out.println("Response has to between numbers 1-5");
+        }
+    }
+
+    //single response answer
+	public Integer getResponse() {
+		return surveyResponse.getResponseAnswer();
+	}
+
 }
