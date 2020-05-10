@@ -23,7 +23,6 @@ public class SurveyResponse {
         this.responseAnswer = -1;
         this.responses = new ArrayList<>();
     }
-
     public int getSurveyResponseId() {
         return surveyResponseId;
     }

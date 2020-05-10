@@ -1,7 +1,12 @@
 package com.example.survey.java.com.example.survey.Survey;
 
+import java.util.List;
+
+import com.example.survey.java.com.example.survey.SurveyResponse.SurveyResponse;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -21,10 +26,23 @@ public class SurveyController {
         }
 
     @RequestMapping("/surveys/{surveyName}")
-	public Survey getSurvey(@PathVariable("name") String surveyName) {
+	public Survey getSurvey(@PathVariable("surveyName") String surveyName) {
         return surveyService.getSurvey(surveyName);
 	}
+
+    @RequestMapping("/surveys")
+	public List<Survey> findAllSurveys() {
+        return surveyService.findAllSurveys();
+	}
+
+    @RequestMapping( value = "/surveys/{id}", method = RequestMethod.DELETE)
+	public void deleteSurvey(int id) {
+        surveyService.deleteSurvey(id);
+    }
+
+    @RequestMapping( value = "/survey/answer", method = RequestMethod.POST)
+	public void addSurveyResponse(@RequestParam("surveyId") int surveyId, @RequestBody SurveyResponse surveyResponse) {
+        surveyService.addSurveyResponse(surveyId, surveyResponse);
+	}    
     
-
-
 }
