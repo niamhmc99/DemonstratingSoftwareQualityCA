@@ -14,8 +14,12 @@ public class SurveyResponse {
     @NonNull
     private List<Integer> responses;
 
-    public SurveyResponse(Integer surveyResponseId) {
-        this.surveyResponseId = surveyResponseId;
+    public SurveyResponse(){
+
+    }
+
+    public SurveyResponse(int surveyResponseId){
+        this.surveyResponseId =surveyResponseId;
         this.responseAnswer = -1;
         this.responses = new ArrayList<>();
     }
