@@ -43,6 +43,11 @@ public class SurveyController {
     @RequestMapping( value = "/survey/answer", method = RequestMethod.POST)
 	public void addSurveyResponse(@RequestParam("surveyId") int surveyId, @RequestBody SurveyResponse surveyResponse) {
         surveyService.addSurveyResponse(surveyId, surveyResponse);
+	}
+
+    @RequestMapping(value = "/survey/average/{surveyName}", method =RequestMethod.GET)
+	public double getSurveyAverage(@PathVariable("surveyName") String surveyName) {
+		return surveyService.getSurveyAverage(surveyName);
 	}    
     
 }
