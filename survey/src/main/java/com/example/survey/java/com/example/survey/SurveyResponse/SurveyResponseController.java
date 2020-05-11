@@ -13,17 +13,17 @@ public class SurveyResponseController {
 
     private final SurveyResponseService surveyResponseService;
 
-    public SurveyResponseController(SurveyResponseService surveyResponseService) {
-        this.surveyResponseService = surveyResponseService;
-    }
+    public SurveyResponseController(final SurveyResponseService surveyResponseService) {
+		this.surveyResponseService = surveyResponseService;
+	}
 
-    @RequestMapping(value = "/responses", method = RequestMethod.POST)
+	@RequestMapping(value = "/responses", method = RequestMethod.POST)
 	public void addResponse(@RequestParam final int response) {
-        surveyResponseService.addResponse(response);
-    }
-    
-    @RequestMapping(value = "/responseList/{responseAnswer}")
-	public void setResponse(@PathVariable("responseAnswer") int responseAnswer) {
+		surveyResponseService.addResponse(response);
+	}
+
+	@RequestMapping(value = "/responseList/{responseAnswer}")
+	public void setResponse(@PathVariable("responseAnswer") final int responseAnswer) {
 		surveyResponseService.setResponse(responseAnswer);
 	}
 
@@ -32,8 +32,14 @@ public class SurveyResponseController {
 		return surveyResponseService.getResponses();
 	}
 
+	@RequestMapping(value = "/response")
 	public Integer getResponse() {
 		return surveyResponseService.getResponse();
+	}
+
+	@RequestMapping(value = "/response/averageResponse")
+	public double getSurveyResponseAverage() {
+		return surveyResponseService.getSurveyResponseAverage();
 	}
 
 }

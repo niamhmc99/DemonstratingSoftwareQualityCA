@@ -34,4 +34,13 @@ public class SurveyResponseService {
 		return surveyResponse.getResponseAnswer();
 	}
 
+	public double getSurveyResponseAverage() {
+        double total=0;
+        List<Integer> responses = getResponses();
+        for(int responseAnswer: responses){
+            total += responseAnswer;
+        }
+		return total/ responses.size();
+	}
+
 }

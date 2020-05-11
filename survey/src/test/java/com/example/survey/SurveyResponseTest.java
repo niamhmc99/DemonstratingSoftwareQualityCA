@@ -43,12 +43,24 @@ public class SurveyResponseTest {
     }
 
     @Test 
-    public void getSurveyResponse(){
+    public void getSurveyResponseTest(){
         //GIVEN
         surveyResponseController.addResponse(3);
         //WHEN
         surveyResponseController.setResponse(3);
         //THEN
         assertEquals(3, surveyResponseController.getResponse(), "Survey Response");
+    }
+
+    @Test
+    public void getSurveyResponseAverageTest(){
+        //GIVEN
+        surveyResponseController.addResponse(2);
+        surveyResponseController.addResponse(4);
+        surveyResponseController.addResponse(3);
+        //WHEN
+        double average = surveyResponseController.getSurveyResponseAverage();
+        //THEN
+        assertEquals(3, average, "Average Survey Response");
     }
 }
