@@ -86,8 +86,7 @@ public class SurveyService {
         for (SurveyResponse response : getSurvey(surveyName).getResponses()) {
             responses.add(response.getResponseAnswer());
         }
-        Collections.sort(responses); //sort the collection, get the first index (the first min number) as the list is now in order
-        return responses.get(0);
+        return Collections.min(responses); 
     	}
 
 	public int getSurveyMaximumScore(String surveyName) {
@@ -95,8 +94,7 @@ public class SurveyService {
         for (SurveyResponse response : getSurvey(surveyName).getResponses()) {
             responses.add(response.getResponseAnswer());
         }
-        Collections.sort(responses); //sort the collection, get the first index (the first min number) as the list is now in order
-        return responses.get(responses.size() -1);
+        return Collections.max(responses);
     	}
 
 }
