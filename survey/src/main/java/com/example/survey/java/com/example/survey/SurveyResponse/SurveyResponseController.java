@@ -37,14 +37,19 @@ public class SurveyResponseController {
 		return surveyResponseService.getResponse();
 	}
 
-	@RequestMapping(value = "/response/averageResponse", method = RequestMethod.POST)
+	@RequestMapping(value = "/response/averageResponse", method = RequestMethod.GET)
 	public double getSurveyResponseAverage() {
 		return surveyResponseService.getSurveyResponseAverage();
 	}
 
-	@RequestMapping(value = "/response/averageResponse", method = RequestMethod.POST)
+	@RequestMapping(value = "/response/standardDeviation", method = RequestMethod.GET)
 	public double getSurveyResponseStandardDev() {
 		return surveyResponseService.getSurveyResponseStandardDeviation();
+	}
+
+	@RequestMapping(value = "/response/minimumScore", method = RequestMethod.GET)
+	public double getSurveyResponseMinimumScore() {
+		return surveyResponseService.getSurveyResponseMinimumScore();
 	}
 
 }

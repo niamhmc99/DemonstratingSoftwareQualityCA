@@ -1,6 +1,6 @@
 package com.example.survey.java.com.example.survey.SurveyResponse;
 
-import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 import org.springframework.stereotype.Service;
@@ -54,5 +54,10 @@ public class SurveyResponseService {
         }
         return Math.sqrt(standardDeviation/responses.size()); //sqrt = square root
     }
+
+	public double getSurveyResponseMinimumScore() {
+		List<Integer> responses = getResponses();
+        return Collections.min(responses); 
+	}
     
 }
