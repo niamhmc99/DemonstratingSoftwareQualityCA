@@ -54,5 +54,17 @@ public class SurveyService {
             System.out.println("Survey Response has to be between 1-5.");
         }
     
-    }   
+    }
+
+	public double getSurveyAverage(String surveyName) {
+        double totalOfResponses =0;
+        Survey averageSurvey = getSurvey(surveyName);
+        List<SurveyResponse> responses = averageSurvey.getResponses();
+
+        for(SurveyResponse sr: responses){ //for each survey question add each reponse to the total sum 
+            totalOfResponses += sr.getResponseAnswer();
+        }
+        return totalOfResponses/responses.size();
+	}
+
 }

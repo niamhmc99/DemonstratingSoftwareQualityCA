@@ -7,7 +7,6 @@ import com.example.survey.java.com.example.survey.SurveyResponse.SurveyResponse;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
-
 import java.util.List;
 
 import org.junit.jupiter.api.Test;
@@ -106,5 +105,40 @@ public class SurveyTest {
         surveyResponses = surveyController.getSurvey("Test Survey Response").getResponses();
         //THEN
         assertEquals(surveyResponses.size(), 10, "List should not contain more than 10 survey responses");
+    }
+
+    @Test
+    public void getSurveyAverageTest(){
+        //GIVEN
+        SurveyResponse response1, response2, response3, response4;
+        surveyController.createSurvey(new Survey(0, "Average Test"));
+        //WHEN
+        response1 = new SurveyResponse(0);
+        response1.addResponses(1);
+        response1.addResponses(2);
+        response1.addResponses(3);
+        response1.addResponses(4);
+        response1.setResponseAnswer(3);
+        surveyController.addSurveyResponse(0, response1);
+        response2 = new SurveyResponse(2);
+        response2.addResponses(2);
+        response2.addResponses(4);
+        response2.setResponseAnswer(2);
+        surveyController.addSurveyResponse(0, response2);
+        response3 = new SurveyResponse(2);
+        response3.addResponses(2);
+        response3.addResponses(4);
+        response3.addResponses(2);
+        response3.setResponseAnswer(4);
+        surveyController.addSurveyResponse(0, response3);
+        response4 = new SurveyResponse(2);
+        response4.addResponses(1);
+        response4.addResponses(3);
+        response4.setResponseAnswer(3);
+        surveyController.addSurveyResponse(0, response4);
+       
+        double surveyAverage = surveyController.getSurveyAverage(surveyController.getSurvey("Average Test").getSurveyName());
+        //THEN
+        assertEquals(3, surveyAverage);   
     }
 }
