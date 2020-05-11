@@ -59,5 +59,10 @@ public class SurveyResponseService {
 		List<Integer> responses = getResponses();
         return Collections.min(responses); 
 	}
+
+	public double getSurveyResponseMaximumScore() {
+		List<Integer> responses = getResponses();
+        return Collections.max(responses); 
+	}
     
 }
