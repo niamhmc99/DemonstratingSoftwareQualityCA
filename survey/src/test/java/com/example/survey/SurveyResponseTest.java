@@ -63,4 +63,16 @@ public class SurveyResponseTest {
         //THEN
         assertEquals(3, average, "Average Survey Response");
     }
+
+    @Test
+    public void getSurveyResponseDeviationTest(){
+        //GIVEN 
+        surveyResponseController.addResponse(1);
+        surveyResponseController.addResponse(2);
+        surveyResponseController.addResponse(3);
+        //WHEN
+        double standardDev = surveyResponseController.getSurveyResponseStandardDev();
+        //THEN
+        assertEquals(0.816496580927726, standardDev, "Standard Deviation of Response");
+    }
 }

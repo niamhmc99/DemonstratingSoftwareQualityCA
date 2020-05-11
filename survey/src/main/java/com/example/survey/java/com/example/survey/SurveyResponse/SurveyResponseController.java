@@ -22,24 +22,29 @@ public class SurveyResponseController {
 		surveyResponseService.addResponse(response);
 	}
 
-	@RequestMapping(value = "/responseList/{responseAnswer}")
+	@RequestMapping(value = "/responseList/{responseAnswer}", method = RequestMethod.POST)
 	public void setResponse(@PathVariable("responseAnswer") final int responseAnswer) {
 		surveyResponseService.setResponse(responseAnswer);
 	}
 
-    @RequestMapping(value = "/responseList")
+    @RequestMapping(value = "/responseList", method = RequestMethod.POST)
 	public List<Integer> getResponses() {
 		return surveyResponseService.getResponses();
 	}
 
-	@RequestMapping(value = "/response")
+	@RequestMapping(value = "/response", method = RequestMethod.POST)
 	public Integer getResponse() {
 		return surveyResponseService.getResponse();
 	}
 
-	@RequestMapping(value = "/response/averageResponse")
+	@RequestMapping(value = "/response/averageResponse", method = RequestMethod.POST)
 	public double getSurveyResponseAverage() {
 		return surveyResponseService.getSurveyResponseAverage();
+	}
+
+	@RequestMapping(value = "/response/averageResponse", method = RequestMethod.POST)
+	public double getSurveyResponseStandardDev() {
+		return surveyResponseService.getSurveyResponseStandardDeviation();
 	}
 
 }
