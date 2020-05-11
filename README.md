@@ -84,9 +84,9 @@ Sprint Backlog contains a list of tasks that a team targets to deliver during a 
 - Include Unit Tests for below methods following TDD.
 - Survey Response Service and Survey Response Controller contains the following:
     - getSurveyResponseAverage() -> returns average result of a Survey Response. 
-    - getSurveyStandardDeviation() -> return the standard deviation result of responses for a Survey Response. 
-    - getSurveyMinimumScore() -> returns minimum score for a Survey Response.
-    - getSurveyMaximumScore() -> returns maximum score for a Survey Response.
+    - getSurveyResponseStandardDeviation() -> return the standard deviation result of responses for a Survey Response. 
+    - getSurveyResponseMinimumScore() -> returns minimum score for a Survey Response.
+    - getSurveyResponseMaximumScore() -> returns maximum score for a Survey Response.
  - **Story Point =** 5
 
  11. **Finish the Documentation**

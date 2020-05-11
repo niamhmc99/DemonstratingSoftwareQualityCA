@@ -65,7 +65,7 @@ public class SurveyResponseTest {
     }
 
     @Test
-    public void getSurveyResponseDeviationTest(){
+    public void getSurveyResponseStandardDeviationTest(){
         //GIVEN 
         surveyResponseController.addResponse(1);
         surveyResponseController.addResponse(2);
@@ -74,5 +74,16 @@ public class SurveyResponseTest {
         double standardDev = surveyResponseController.getSurveyResponseStandardDev();
         //THEN
         assertEquals(0.816496580927726, standardDev, "Standard Deviation of Response");
+    }
+    @Test
+    public void getSurveyResponseMinimumScoreTest(){
+        //GIVEN 
+        surveyResponseController.addResponse(1);
+        surveyResponseController.addResponse(2);
+        surveyResponseController.addResponse(3);
+        //WHEN
+        double minimum = surveyResponseController.getSurveyResponseMinimumScore();
+        //THEN
+        assertEquals(1, minimum, "Minimum Score for Response");
     }
 }
