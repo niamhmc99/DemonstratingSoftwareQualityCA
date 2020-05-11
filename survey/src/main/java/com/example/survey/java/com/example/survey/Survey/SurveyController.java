@@ -48,6 +48,11 @@ public class SurveyController {
     @RequestMapping(value = "/survey/average/{surveyName}", method =RequestMethod.GET)
 	public double getSurveyAverage(@PathVariable("surveyName") String surveyName) {
 		return surveyService.getSurveyAverage(surveyName);
+	}
+
+    @RequestMapping(value = "/survey/standardDev/{surveyName}", method =RequestMethod.GET)
+	public double getSurveyStandardDeviation(@PathVariable("surveyName") String surveyName) {
+		return surveyService.getSurveyStandardDeviation(surveyName);
 	}    
     
 }

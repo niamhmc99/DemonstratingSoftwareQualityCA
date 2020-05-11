@@ -67,4 +67,17 @@ public class SurveyService {
         return totalOfResponses/responses.size();
 	}
 
+	public double getSurveyStandardDeviation(String surveyName) {
+        double standardDeviation = 0.0;
+        double average = getSurveyAverage(surveyName);
+        List<Integer> responses = new ArrayList<>();
+        for(SurveyResponse sr: getSurvey(surveyName).getResponses()){ 
+           responses.add(sr.getResponseAnswer());
+        }
+        for(int response: responses) {
+            standardDeviation += Math.pow(response - average, 2); //pow = power
+        }
+        return Math.sqrt(standardDeviation/responses.size()); //sqrt = square root
+	}
+
 }
