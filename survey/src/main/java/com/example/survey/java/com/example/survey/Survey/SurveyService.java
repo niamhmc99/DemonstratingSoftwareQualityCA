@@ -1,6 +1,7 @@
 package com.example.survey.java.com.example.survey.Survey;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 import com.example.survey.java.com.example.survey.SurveyResponse.SurveyResponse;
@@ -79,5 +80,15 @@ public class SurveyService {
         }
         return Math.sqrt(standardDeviation/responses.size()); //sqrt = square root
 	}
+
+	public int getSurveyMinimumScore(String surveyName) {
+        List<Integer> responses = new ArrayList<>();
+
+        for (SurveyResponse response : getSurvey(surveyName).getResponses()) {
+            responses.add(response.getResponseAnswer());
+        }
+        Collections.sort(responses); //sort the collection, get the first index (the first min number) as the list is now in order
+        return responses.get(0);
+    	}
 
 }

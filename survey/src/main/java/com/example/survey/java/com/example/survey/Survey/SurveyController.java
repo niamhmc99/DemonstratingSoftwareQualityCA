@@ -53,6 +53,11 @@ public class SurveyController {
     @RequestMapping(value = "/survey/standardDev/{surveyName}", method =RequestMethod.GET)
 	public double getSurveyStandardDeviation(@PathVariable("surveyName") String surveyName) {
 		return surveyService.getSurveyStandardDeviation(surveyName);
+	}
+
+    @RequestMapping(method = RequestMethod.GET, value = "/surveys/minimum/{surveyName}")
+	public int getSurveyMinimumScore(String surveyName) {
+		return surveyService.getSurveyMinimumScore(surveyName);
 	}    
     
 }
