@@ -86,4 +86,18 @@ public class SurveyResponseTest {
         //THEN
         assertEquals(1, minimum, "Minimum Score for Response");
     }
+
+    @Test
+    public void getSurveyResponseMaximumScoreTest(){
+        //GIVEN 
+        surveyResponseController.addResponse(4);
+        surveyResponseController.addResponse(2);
+        surveyResponseController.addResponse(5);
+        //WHEN
+        double maximum = surveyResponseController.getSurveyResponseMaximumScore();
+        //THEN
+        assertEquals(5, maximum, "Maximum Score for Response");
+    }
+
+    
 }

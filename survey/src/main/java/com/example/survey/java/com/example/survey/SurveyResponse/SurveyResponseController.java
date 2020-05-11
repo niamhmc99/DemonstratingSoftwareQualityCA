@@ -52,4 +52,9 @@ public class SurveyResponseController {
 		return surveyResponseService.getSurveyResponseMinimumScore();
 	}
 
+	@RequestMapping(value = "/response/maximumScore", method = RequestMethod.GET)
+	public double getSurveyResponseMaximumScore() {
+		return surveyResponseService.getSurveyResponseMaximumScore();
+	}
+
 }
