@@ -112,9 +112,26 @@ Sprint Backlog contains a list of tasks that a team targets to deliver during a 
 13 | Long Time to Deliver - High Complexity, Contains many critical Unknowns. Like an 8; discuss ways to break it down into smaller tasks.  
 21 | Danger Zone - Find a way to break down the complexity into smaller tasks.
 
-**For example:** 
+**Comparison of Two Story Tasks - For Example:** 
 
-The 3rd story task: Create Survey Model has an estimated number of story points = 1. This task is straight forward and requires minimal amount of time. However, the 6th story task: Create Survey Controller Class has an estimated number of story points = 5. This story task in comparison to the 3rd story, involves a larger amount of work due to higher complexity and the unknowns that may be discovered throughout the development. 
+**Third Story Task** | **Sixth Story Task**
+------------- | ------------------
+3. **Create Survey Model** | 6. **Create Survey Controller Class**
+- Survey model contains an id, name and a list of Survey Responses. | - Use @Controller annotation.
+- Each variable has a corresponding getter method. | - Methods contains request mappings. 
+- | - Includes Unit Tests for below methods following TDD: 
+- |    - getAllSurveys() -> get all Surveys.
+- |    - getSurveyByName() -> get Survey with specific name. 
+- |    - createSurvey() -> creates new Survey.
+- |    - deleteSurvey() -> delete a Survey.
+- |   - addSurveyResponse() -> add Survey Response to the list. 
+- | - Each variable has a corresponding getter method.| 
+- **Story Point =** 1 | - **Story Point =** 5
+
+Comparison 
+- The 3rd Story Task: Create Survey Model has an estimated number of story points = 1. This task is straight forward and requires minimal amount of time. 
+
+- However, the 6th story task: Create Survey Controller Class has an estimated number of story points = 5. This story task in comparison to the 3rd story, involves a larger amount of work due to higher complexity and the unknowns that may be discovered throughout the development. 
 
 ### Velocity Metircs:
 Velocity is a measure of the amount of work a team can accomplish during a sprint. It is calculated at the end of a sprint by adding up all the story points given to each feature, user story or backlog item that is successfully delivered within a sprint. This allows the team to accurately perdict the amount of stories they will realistically get to complete in the next sprint. 
