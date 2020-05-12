@@ -116,17 +116,16 @@ Sprint Backlog contains a list of tasks that a team targets to deliver during a 
 
 **Third Story Task**       | **Sixth Story Task**
 -------------------------- | ------------------
-3. **Create Survey Model** | 6. **Create Survey Controller Class**
- Survey model contains an id, name and a list of Survey Responses. | - Use @Controller annotation.
- Each variable has a corresponding getter method. | - Methods contains request mappings. 
-... | - Includes Unit Tests for below methods following TDD: 
-... |    - getAllSurveys() -> get all Surveys.
-... |    - getSurveyByName() -> get Survey with specific name. 
-... |    - createSurvey() -> creates new Survey.
-... |    - deleteSurvey() -> delete a Survey.
-... |   - addSurveyResponse() -> add Survey Response to the list. 
-... | - Each variable has a corresponding getter method.| 
-**Story Point =** 1 | **Story Point =** 5
+Create Survey Model        | Create Survey Controller Class
+ Survey model contains an id, name and a list of Survey Responses. | Use @Controller annotation.
+ Each variable has a corresponding getter method. |  Methods contains request mappings. 
+... |  Includes Unit Tests for below methods following TDD: 
+... |   getAllSurveys() -> get all Surveys.
+... |   getSurveyByName() -> get Survey with specific name. 
+... |   createSurvey() -> creates new Survey.
+... |   deleteSurvey() -> delete a Survey.
+... |   addSurveyResponse() -> add Survey Response to the list. 
+Story Point = 1 | Story Point = 5
 
 Comparison 
 - The 3rd Story Task: Create Survey Model has an estimated number of story points = 1. This task is straight forward and requires minimal amount of time. 
