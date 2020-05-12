@@ -125,10 +125,12 @@ Test Driven Development is the process of software development where you first w
 ![TDD Process](screenshots/TDD_Diagram.png)
 
 ## Test Coverage Metric
-Test coverage is defined as a metric in Software Testing that measures the amount of testing performed by a set of test.
 
-Test coverage is one of the many fundamental metrics in Software Development used to analyse, track and measure the quality of code written in a software project. Test coverage is described as a metric that measures the extent to which the code developed is tested using a test suite.
- total amount of testing executed on a piece of code to which the code has been tested by using a set of tests. The Test Coverage Metric used in this project is [Java Test Runner: vscode-java-test](https://github.com/microsoft/vscode-java-test). This is a lightweight extension that allows the user to Run and debug JUnit or TestNG test cases in Visual Studio Code. 
+Test coverage is one of the many fundamental metrics in Software Development used to analyse, track and measure the quality of code written in a software project. 
+
+Test coverage is defined as a metric that measures the extent to which the code developed is tested using a test suite.
+
+The Test Coverage Metric used in this project is [Java Test Runner: vscode-java-test](https://github.com/microsoft/vscode-java-test). This is a lightweight extension that allows the user to Run and debug JUnit or TestNG test cases in Visual Studio Code. 
 
 The features include:
 - Run/Debug Test Cases.
