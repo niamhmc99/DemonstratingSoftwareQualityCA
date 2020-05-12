@@ -137,9 +137,22 @@ Comparison
 Velocity is a measure of the amount of work a team can accomplish during a sprint. It is calculated at the end of a sprint by adding up all the story points given to each feature, user story or backlog item that is successfully delivered within a sprint. This allows the team to accurately perdict the amount of stories they will realistically get to complete in the next sprint. 
 
 ## Unit Testing and Test-Driven Development
-Test Driven Development is the process of software development where you first write a test thats fails before writing the implementation code.
+Test Driven Development is the process of Software Development where you first write a test thats fails before writing the implementation code. This process results in improved design qualities while avoiding  duplication of code as this process promotes writing a small amount of code at one time in order to get the test to pass.
 
 ![TDD Process](screenshots/TDD_Diagram.png)
+
+For each code feature developed I followed the TDD process. Unit tests were written for the testing purposes of this project. 
+This included a step to step guide on how I created each feature within this project. 
+
+Each commit included an individual test along with code to support the functionality:
+1. Write a single test method in the corresponding Test class.
+2. Test will fail - which is expected as no code to support this feature.
+3. Write just enough code for the functionality in the Survey (Response) Service and Controller class in order for the test to pass.
+4. Test Passes.
+5. Refactor - if necessary to meet the code review checklist requirements. 
+6. Repeat for the next feature.
+- [Get All Surveys - Commit Example ](https://github.com/niamhmc99/DemonstratingSoftwareQualityCA/pull/11)
+
 
 ## Test Coverage Metric
 
@@ -169,3 +182,4 @@ Example of the Java Test Runner running:
 
 ## Code-Review Checklist
 
+[Create Survey - Pull Request Example](https://github.com/niamhmc99/DemonstratingSoftwareQualityCA/pull/7)
