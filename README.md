@@ -6,7 +6,7 @@ Before starting to code any standard software development project there are nume
 
 
 ## Scrum Sprint Backlog and Task Estimation
-Sprint Backlog contains a list of tasks that a team targets to deliver during a sprint in order to reach the sprint needed to be completed within the sprint. Ideally, the Sprint Backlog items are taken directly from the product backlog. The Sprint Backlog identifies a set of tasks and to-do items for the developers to complete in the upcoming sprint. A sprint has generally a fixed time period of 2 weeks. The tasks in a sprint are identified before the initial sprint start date. The Sprint Backlog is a highly-visibible, real-time picture of the work that the development team plans to complete throughout the Sprint block.
+Sprint Backlog contains a list of tasks that a team targets to deliver during a sprint in order to reach the sprint needed to be completed within the sprint. Ideally, the Sprint Backlog items are taken directly from the product backlog. The Sprint Backlog identifies a set of tasks and to-do items for the developers to complete in the upcoming sprint. A sprint has generally a fixed time period of 2 weeks. The tasks in a sprint are identified before the initial sprint start date. The Sprint Backlog is a highly-visible, real-time picture of the work that the development team plans to complete throughout the Sprint block.
 
 ### Sprint Backlog
 
@@ -36,7 +36,7 @@ Sprint Backlog contains a list of tasks that a team targets to deliver during a 
 5. **Create Survey Service Class**
 - Use @Service annotation.
 - Includes Unit Tests for below methods following TDD: 
-    - getAllSurveys() -> retruns Survey list.
+    - getAllSurveys() -> returns Survey list.
     - getSurveyByName() -> returns specific Survey.
     - createSurvey() -> create and adds a new Survey to the list of Surveys. 
     - deleteSurvey() -> deletes and removes a Survey from the list of Surveys.
@@ -96,7 +96,7 @@ Sprint Backlog contains a list of tasks that a team targets to deliver during a 
  - **Story Point =** 2
 
  ### Task Estimation
- Task Estimation can be extrememly difficult. Everyone on the team is involved in the estimation process as each member brings a different perspective on the product and work required to deliver a user story/ task. 
+ Task Estimation can be extremely difficult. Everyone on the team is involved in the estimation process as each member brings a different perspective on the product and work required to deliver a user story/ task. 
 
  In the Sprint Backlog, I defined the stories/tasks that are needed to successful complete this project. 
  Using story points I estimated the relative effort of work involved in each task using a Fibonacci Sequence: 0, 1, 2, 3, 5, 8, 13, 21, etc. 
@@ -132,11 +132,11 @@ Comparison
 
 - However, the 6th story task: Create Survey Controller Class has an estimated number of story points = 5. This story task in comparison to the 3rd story, involves a larger amount of work due to higher complexity and the unknowns that may be discovered throughout the development. 
 
-### Velocity Metircs:
-Velocity is a measure of the amount of work a team can accomplish during a sprint. It is calculated at the end of a sprint by adding up all the story points given to each feature, user story or backlog item that is successfully delivered within a sprint. This allows the team to accurately perdict the amount of stories they will realistically get to complete in the next sprint. 
+### Velocity Metrics:
+Velocity is a measure of the amount of work a team can accomplish during a sprint. It is calculated at the end of a sprint by adding up all the story points given to each feature, user story or backlog item that is successfully delivered within a sprint. This allows the team to accurately predict the amount of stories they will realistically get to complete in the next sprint. 
 
 ## Unit Testing and Test-Driven Development
-Test Driven Development is the process of Software Development where you first write a test thats fails before writing the implementation code. This process results in improved design qualities while avoiding  duplication of code as this process promotes writing a small amount of code at one time in order to get the test to pass.
+Test Driven Development is the process of Software Development where you first write a test that fails before writing the implementation code. This process results in improved design qualities while avoiding  duplication of code as this process promotes writing a small amount of code at one time in order to get the test to pass.
 
 ![TDD Process](screenshots/TDD_Diagram.png)
 
@@ -185,13 +185,13 @@ The GitFlow process was followed throughout to ensure a smooth running process i
 
 This branch is where the finalized project is located. This includes all the necessary documentation and code for the project. Pull requests from the survey_and_responses are only allowed here as this is the developing branch. This branch is familiar to every user.  
 
-**Survey_and_responses** 
+**Develop - Survey_and_responses** 
 
-This branch acts as the **develop branch** for my project. This defines the developing phase with the addition of feature branches created off it. TIt reflects the state of the latest developement delivered which is ready for the next release. This branch only accepts pull requests from feature branches. Once the code has reached a suitable state for it to be released to production it is merged back into the master branch.  
+This branch acts as the **develop branch** for my project. This defines the developing phase with the addition of feature branches created off it. It reflects the state of the latest development  delivered which is ready for the next release. This branch only accepts pull requests from feature branches. Once the code has reached a suitable state for it to be released to production it is merged back into the master branch.  
 
 **Feature Branches** 
 
-These seperate branches branch of the survey_and_responses which is the develop branch for the project. Once the necessary code is implemented they are merged back into this develop branch.  
+These separate branches branch of the survey_and_responses which is the develop branch for the project. Once the necessary code is implemented they are merged back into this develop branch.  
 
 These branches are used for the addition of new features.  
 
@@ -221,5 +221,27 @@ Each of these branches represent a new feature that follows a Test-Driven develo
 If a bug is encountered anywhere in piece of live production code a Hotfix branch can be created. The naming of this branch includes the version of where the bug occurs in the corresponding tag from the master branch. Overall, this allows other team members to continue developing off the develop branch while someone fixes the current bug.  
 
 ## Code-Review Checklist
+
+Code review is an essential activity part of the Software Quality Assurance. This is where the source code is broken into small pieces an inspected by one or more team member(s). Code review is done in order to detect mistakes, catch early bugs and ensure that the code follows the standard practices. Implementing code reviews is one of the relatively cheapest ways to detect and reduce bugs at an early stage.
+
+As this is an individual assignment I will review and accept my own Pull Requests. However, before merging each (feature) branch I will inspect my own work and ensure I have ticked of each item in my Code Review Checklist.  
+
+Before carrying out a Code Review identify wheter this is:
+
+1. Minor change - grammer, syntax, refactoring code which doesn't require new tests.
+2. Code change is covered by existing test - therefore no new test is needed to be written.
+3. Code change is new - and needs new test case to be written. 
+
+- [ ] Adequate white space and indentation?
+- [ ] Correct use of syntax? 
+- [ ] Access modifiers used correctly?
+- [ ] Does the naming convention make sense and do they have meaning?
+- [ ] Does the code make sense? Is it readable? If some code is unclear, is there a code comment to signify the function of the code?
+- [ ] Is there associated unit tests? If not, why not?
+- [ ] Are unit tests passing? If not, why not?
+- [ ] Is there adequate description in the pull request title?
+- [ ] Does one method have one specific action? Do I need to split the method into two methods? 
+- [ ] Is there any repeated code/ duplication of code? 
+
 
 [Create Survey - Pull Request Example](https://github.com/niamhmc99/DemonstratingSoftwareQualityCA/pull/7)
