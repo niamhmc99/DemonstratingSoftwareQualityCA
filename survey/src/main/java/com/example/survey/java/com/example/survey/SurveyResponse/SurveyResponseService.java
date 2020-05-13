@@ -1,4 +1,6 @@
 package com.example.survey.java.com.example.survey.SurveyResponse;
+
+import java.util.Collections;
 import java.util.List;
 
 import org.springframework.stereotype.Service;
@@ -34,4 +36,33 @@ public class SurveyResponseService {
 		return surveyResponse.getResponseAnswer();
 	}
 
+	public double getSurveyResponseAverage() {
+        double total=0;
+        List<Integer> responses = getResponses();
+        for(int responseAnswer: responses){
+            total += responseAnswer;
+        }
+		return total/ responses.size();
+	}
+
+	public double getSurveyResponseStandardDeviation() {
+        double standardDeviation = 0.0;
+        double average = getSurveyResponseAverage();
+        List<Integer> responses =getResponses();
+        for(int response: responses) {
+            standardDeviation += Math.pow(response - average, 2); //pow = power
+        }
+        return Math.sqrt(standardDeviation/responses.size()); //sqrt = square root
+    }
+
+	public double getSurveyResponseMinimumScore() {
+		List<Integer> responses = getResponses();
+        return Collections.min(responses); 
+	}
+
+	public double getSurveyResponseMaximumScore() {
+		List<Integer> responses = getResponses();
+        return Collections.max(responses); 
+	}
+    
 }

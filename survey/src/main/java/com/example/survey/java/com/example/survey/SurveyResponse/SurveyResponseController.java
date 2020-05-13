@@ -13,27 +13,48 @@ public class SurveyResponseController {
 
     private final SurveyResponseService surveyResponseService;
 
-    public SurveyResponseController(SurveyResponseService surveyResponseService) {
-        this.surveyResponseService = surveyResponseService;
-    }
+    public SurveyResponseController(final SurveyResponseService surveyResponseService) {
+		this.surveyResponseService = surveyResponseService;
+	}
 
-    @RequestMapping(value = "/responses", method = RequestMethod.POST)
+	@RequestMapping(value = "/responses", method = RequestMethod.POST)
 	public void addResponse(@RequestParam final int response) {
-        surveyResponseService.addResponse(response);
-    }
-    
-    @RequestMapping(value = "/responseList/{responseAnswer}")
-	public void setResponse(@PathVariable("responseAnswer") int responseAnswer) {
+		surveyResponseService.addResponse(response);
+	}
+
+	@RequestMapping(value = "/responseList/{responseAnswer}", method = RequestMethod.POST)
+	public void setResponse(@PathVariable("responseAnswer") final int responseAnswer) {
 		surveyResponseService.setResponse(responseAnswer);
 	}
 
-    @RequestMapping(value = "/responseList")
+    @RequestMapping(value = "/responseList", method = RequestMethod.POST)
 	public List<Integer> getResponses() {
 		return surveyResponseService.getResponses();
 	}
 
+	@RequestMapping(value = "/response", method = RequestMethod.POST)
 	public Integer getResponse() {
 		return surveyResponseService.getResponse();
+	}
+
+	@RequestMapping(value = "/response/averageResponse", method = RequestMethod.GET)
+	public double getSurveyResponseAverage() {
+		return surveyResponseService.getSurveyResponseAverage();
+	}
+
+	@RequestMapping(value = "/response/standardDeviation", method = RequestMethod.GET)
+	public double getSurveyResponseStandardDev() {
+		return surveyResponseService.getSurveyResponseStandardDeviation();
+	}
+
+	@RequestMapping(value = "/response/minimumScore", method = RequestMethod.GET)
+	public double getSurveyResponseMinimumScore() {
+		return surveyResponseService.getSurveyResponseMinimumScore();
+	}
+
+	@RequestMapping(value = "/response/maximumScore", method = RequestMethod.GET)
+	public double getSurveyResponseMaximumScore() {
+		return surveyResponseService.getSurveyResponseMaximumScore();
 	}
 
 }

@@ -1,6 +1,7 @@
 package com.example.survey.java.com.example.survey.Survey;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 import com.example.survey.java.com.example.survey.SurveyResponse.SurveyResponse;
@@ -66,5 +67,34 @@ public class SurveyService {
         }
         return totalOfResponses/responses.size();
 	}
+
+	public double getSurveyStandardDeviation(String surveyName) {
+        double standardDeviation = 0.0;
+        double average = getSurveyAverage(surveyName);
+        List<Integer> responses = new ArrayList<>();
+        for(SurveyResponse sr: getSurvey(surveyName).getResponses()){ 
+           responses.add(sr.getResponseAnswer());
+        }
+        for(int response: responses) {
+            standardDeviation += Math.pow(response - average, 2); //pow = power
+        }
+        return Math.sqrt(standardDeviation/responses.size()); //sqrt = square root
+	}
+
+	public int getSurveyMinimumScore(String surveyName) {
+        List<Integer> responses = new ArrayList<>();
+        for (SurveyResponse response : getSurvey(surveyName).getResponses()) {
+            responses.add(response.getResponseAnswer());
+        }
+        return Collections.min(responses); 
+    	}
+
+	public int getSurveyMaximumScore(String surveyName) {
+        List<Integer> responses = new ArrayList<>();
+        for (SurveyResponse response : getSurvey(surveyName).getResponses()) {
+            responses.add(response.getResponseAnswer());
+        }
+        return Collections.max(responses);
+    	}
 
 }

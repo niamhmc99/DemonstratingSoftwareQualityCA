@@ -42,5 +42,3 @@ Each of these branches represent a new feature that follows a Test-Driven develo
 **Hotfix Branches**
 
 If a bug is encountered anywhere in piece of live production code a Hotfix branch can be created. The naming of this branch includes the version of where the bug occurs in the corresponding tag from the master branch. Overall, this allows other team members to continue developing off the develop branch while someone fixes the current bug. 
-
-
