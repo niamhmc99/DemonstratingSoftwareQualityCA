@@ -30,5 +30,10 @@ public class SurveyService {
             logger.error("[ERROR] Survey not found in the list");
             throw new IllegalArgumentException("Survey not found");
         }
+    }
+    
+	public Survey createEmptySurvey(Survey survey) {
+		Survey s = new Survey();
+		return s;
 	}
 }
