@@ -24,7 +24,10 @@ public class SurveyController {
 	public Survey getSurvey(@PathVariable("name") String surveyName) {
         return surveyService.getSurvey(surveyName);
 	}
-    
 
+    @RequestMapping("/empty_survey")
+	public Survey createEmptySurvey(@RequestParam Survey survey) {
+        return surveyService.createEmptySurvey(survey);
+	}
 
 }

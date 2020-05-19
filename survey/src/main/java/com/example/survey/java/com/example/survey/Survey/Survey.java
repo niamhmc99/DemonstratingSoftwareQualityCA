@@ -21,8 +21,11 @@ public class Survey {
         this.surveyName = surveyName;
         this.responses = new ArrayList<>();
     }
+    
+    public Survey() { //empty constructor 
+    }
 
-    public int getId() {
+	public int getId() {
         return id;
     }
 
